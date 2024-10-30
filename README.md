@@ -4,15 +4,15 @@ A demo project for using the [`react-molviewer`](https://cllde8.github.io/react-
 
 ### How to Run this Demo
 
-1. **Clone the Repository**
+**1. Clone the Repository**
 
 Clone the repository to your local environment:
 
 ```
-git clone git@github.com:cllde8/react-molviewer-demo.git
+git clone git@github.com:CLLPCH/react-molviewer-demo.git
 ```
 
-2. **Build the Project**
+**2. Build the Project**
 
 Navigate to the project root folder and run:
 
@@ -20,7 +20,7 @@ Navigate to the project root folder and run:
 yarn build
 ```
 
-3. **Start the Server**
+**3. Start the Server**
 
 Start the server with:
 
@@ -28,7 +28,7 @@ Start the server with:
 yarn start
 ```
 
-4. **Access this Demo Application**
+**4. Access this Demo Application**
 
 By default, the application will be available at `http://localhost:8080/` after starting the server.
 
