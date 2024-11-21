@@ -44,6 +44,9 @@ or
 http://localhost:8080/chemrepo
 ```
 
+
+> 🔵 **Info**: This demo is using React 18, you can change it to React 17 by changing the `react` and `react-dom` version in `package.json` to `17.x`.
+
 ### Contact Us
 
 If you have any questions or suggestions, please contact the contributors:
