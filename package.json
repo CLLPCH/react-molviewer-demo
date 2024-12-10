@@ -20,8 +20,9 @@
     "README.md"
   ],
   "scripts": {
+    "data": "cp -r src/demo/data public/jsmol",
     "jsmol": "cp -r node_modules/react-molviewer/dist/jsmol public/jsmol",
-    "build": "rm -rf public/jsmol && yarn install && yarn jsmol",
+    "build": "rm -rf public/jsmol && yarn install && yarn jsmol && yarn data",
     "start": "webpack-dev-server --config ./webpack.dev.js --hot"
   },
   "dependencies": {

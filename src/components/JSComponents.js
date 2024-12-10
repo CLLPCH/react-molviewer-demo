@@ -51,6 +51,18 @@ function JSChemRepo() {
   );
 }
 
+// http://localhost:8080/jsmol/data/9h86.pdb
+function JSPDB() {
+  return (
+    <div className="full-container">
+      <h2>
+        {name} Version {version}
+      </h2>
+      <MolViewer molContent="http://localhost:8080/jsmol/data/9h86.pdb" viewType="file" fnCb={() => {}} fnInit={() => {}} />
+    </div>
+  );
+}
+
 // http://localhost:8080/jsmol/data/caffeine.mol
 function JSComponent() {
   return (
@@ -63,4 +75,4 @@ function JSComponent() {
   );
 }
 
-export { JSComponent, JSChemRepo, JSPubChem };
+export { JSComponent, JSChemRepo, JSPubChem, JSPDB };

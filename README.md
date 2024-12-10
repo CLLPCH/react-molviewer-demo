@@ -44,6 +44,12 @@ or
 http://localhost:8080/chemrepo
 ```
 
+or
+
+```
+http://localhost:8080/pdb
+```
+
 
 > 🔵 **Info**: This demo is using React 18, you can change it to React 17 by changing the `react` and `react-dom` version in `package.json` to `17.x`.
 

@@ -1,6 +1,6 @@
 import React from 'react';
 import { createBrowserRouter } from 'react-router-dom';
-import { JSComponent, JSChemRepo, JSPubChem } from './components/JSComponents';
+import { JSComponent, JSChemRepo, JSPubChem, JSPDB } from './components/JSComponents';
 
 export const routes = createBrowserRouter([
   {
@@ -14,5 +14,9 @@ export const routes = createBrowserRouter([
   {
     path: '/pubchem',
     element: <JSPubChem />,
+  },
+  {
+    path: '/pdb',
+    element: <JSPDB />,
   },
 ]);
