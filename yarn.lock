@@ -5199,10 +5199,10 @@ react-is@^16.13.1:
   resolved "https://registry.yarnpkg.com/react-is/-/react-is-16.13.1.tgz#789729a4dc36de2999dc156dd6c1d9c18cea56a4"
   integrity sha512-24e6ynE2H+OKt4kqsOvNd8kBpV65zoxbA4BVsEOB3ARVWQki/DHzaUoC5KuON/BiccDaCCTZBuOcfZs70kR8bQ==
 
-react-molviewer@^1.2.0:
-  version "1.2.0"
-  resolved "https://registry.yarnpkg.com/react-molviewer/-/react-molviewer-1.2.0.tgz#32ab3cf224dc8e408b92a31add4b1d238db90fc3"
-  integrity sha512-jWiVfWPZ5RYZ6FTv9QumHYj5dStmZaWW/Gln7bqET3Wa1Rq1gR+ke/7jALTWM4k2FdF69dpie4FVdGWBkK8WxA==
+react-molviewer@1.3.0:
+  version "1.3.0"
+  resolved "https://registry.yarnpkg.com/react-molviewer/-/react-molviewer-1.3.0.tgz#bf42bf8fb2b7f825cc7bbda191deec0e71082bbc"
+  integrity sha512-i/tGK0n3nE7xThdrms00CuBXddCL/BdHg2OhIhHP5dleyRvdBHyjxz8KpmmBVglT2L744uIl836hVW9SS8k4TA==
 
 react-refresh@^0.14.0:
   version "0.14.2"
