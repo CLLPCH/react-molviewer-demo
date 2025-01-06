@@ -10,9 +10,12 @@ if (!appContainer) {
   throw new Error('#app element does not exist!');
 }
 
-if (ReactDOM.createRoot) {
-  const root = ReactDOM.createRoot(appContainer);
-  root.render(<RouterProvider router={routes} />);
-} else {
-  ReactDOM.render(<RouterProvider router={routes} />, appContainer);
-}
+(async () => {
+  if ('createRoot' in ReactDOM) {
+    const { createRoot } = await import('react-dom/client');
+    const root = createRoot(appContainer);
+    root.render(<RouterProvider router={routes} />);
+  } else {
+    ReactDOM.render(<RouterProvider router={routes} />, appContainer);
+  }
+})();
