@@ -1,6 +1,6 @@
 const path = require('path');
 const Dotenv = require('dotenv-webpack');
-const TerserPlugin = require("terser-webpack-plugin");
+const TerserPlugin = require('terser-webpack-plugin');
 
 module.exports = {
   mode: 'development',
@@ -14,24 +14,16 @@ module.exports = {
     libraryTarget: 'umd',
     globalObject: 'this', // Define the global object to 'this'
   },
-  optimization: {
-    minimize: true,
-    minimizer: [new TerserPlugin()],
-  },
+  optimization: { minimize: true, minimizer: [new TerserPlugin()] },
   resolve: { extensions: ['.js', '.jsx'] },
   module: {
     rules: [
-      {
-        test: /\.(png|svg|jpg|jpeg|gif)$/i,
-        type: 'asset/resource',
-      },
+      { test: /\.(png|svg|jpg|jpeg|gif)$/i, type: 'asset/resource' },
       {
         test: /\.(js|jsx)$/,
         exclude: /(node_modules|bower_components)/,
         loader: 'babel-loader',
-        options: {
-          presets: ['@babel/preset-env', '@babel/preset-react'],
-        },
+        options: { presets: ['@babel/preset-env', '@babel/preset-react'] },
       },
       {
         test: /\.(scss|css)$/i,
@@ -47,9 +39,7 @@ module.exports = {
       },
     ],
   },
-  plugins: [
-    new Dotenv(),
-  ],
+  plugins: [new Dotenv()],
   devServer: {
     headers: {
       'Access-Control-Allow-Origin': '*',
@@ -57,22 +47,19 @@ module.exports = {
       'Access-Control-Allow-Headers': 'Content-Type',
     },
     historyApiFallback: true,
-    static: {
-      directory: path.join(__dirname, 'public/'),
-    },
+    static: { directory: path.join(__dirname, 'public/') },
     port: 8080,
-    devMiddleware: {
-      publicPath: 'http://localhost:3000/',
-    },
+    devMiddleware: { publicPath: 'http://localhost:3000/' },
     open: true,
     hot: 'only',
-    proxy: {
-      '/api/chemotion': {
+    proxy: [
+      {
+        context: ['/api/chemotion'],
         target: 'https://www.chemotion-repository.net',
         changeOrigin: true,
         pathRewrite: { '^/api/chemotion': '/api/v1/public' },
         secure: false,
       },
-    },
+    ],
   },
 };
